@@ -1,0 +1,28 @@
+.P-about-us-modal {
+  position        : fixed;
+  z-index         : 9999;
+  width           : 100%;
+  height          : 100vh;
+  left            : 0;
+  top             : 0;
+  display         : flex;
+  align-items     : center;
+  justify-content : center;
+
+  .P-about-us-modal-bg {
+    background-color : rgba(0, 0, 0, 0.3);
+    position         : absolute;
+    width            : 100%;
+    left             : 0;
+    top              : 0;
+    height           : 100%;
+  }
+
+  .P-about-modal-content {
+    min-width        : 400px;
+    background-color : white;
+    border-radius    : 12px;
+    padding: 15px;
+    position: relative;
+  }
+}
