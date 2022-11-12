@@ -2,7 +2,11 @@ import React from "react";
 import ProductBox from "../../components/productBox";
 import image1 from '../../assets/images/image-1.jpg'
 import image2 from '../../assets/images/image-2.jpg'
+// nkarnern  import enq anum ays tarberakov sa  modulain tarberakn e
+// ev import aneluc  heto  integrum eqn inloine tarberakov  html  tegi  vra
+// integrum eqn ays tarberakov
 
+// style={{backgroundImage: `url('${this.props.item.image}')`}}
 class Product extends React.Component {
 
   // state  vorte  pahum eqn  tvyal  componenti hamar naxatesvac  popoxakannern  ays  tiruytyum  ogtagorcelu hamar
