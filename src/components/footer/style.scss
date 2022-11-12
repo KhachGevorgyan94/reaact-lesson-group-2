@@ -1,0 +1,11 @@
+@import "../../assets/style/variables.scss";
+.footer-color {
+    margin-top: 10px;
+    background-color: $dark-grey;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    p {
+        font-size: 13px;
+    }
+}

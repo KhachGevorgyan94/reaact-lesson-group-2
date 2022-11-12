@@ -1,0 +1,11 @@
+@import '../../assets/style/variables.scss';
+.header-section {
+    background-color: $light-grey;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    h1 {
+        font-size: 25px;
+        margin-left: 15px;
+    }
+}
