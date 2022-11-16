@@ -1,16 +1,35 @@
 .G-container {
-    max-width: 1200px;
-    padding: 0 15px;
-    margin: 0 auto;
+  max-width : 1200px;
+  padding   : 0 15px;
+  margin    : 0 auto;
 }
 
 .G-title {
-    font-size: 13px;
-    font-weight: 600;
-    margin: 0 10px 10px;
+  font-size   : 13px;
+  font-weight : 600;
+  margin      : 0 10px 10px;
 }
 
 .G-padding-33 {
-    width: 33.3%;
-    padding: 15px;
+  width   : 33.3%;
+  padding : 15px;
+}
+
+
+.P-menu {
+  li {
+    margin : 0 10px;
+
+    a {
+      color : black;
+
+      &.P-active-header {
+        color : aqua;
+      }
+    }
+  }
+}
+
+.P-admin {
+  display : flex;
 }
