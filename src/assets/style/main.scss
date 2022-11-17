@@ -1,0 +1,103 @@
+@import "variables";
+
+header {
+  display: flex;
+  align-items: flex-end;
+  padding-bottom: 40px;
+  height: 60vh;
+  min-width: 40vh;
+  background-attachment: fixed;
+  color: $white;
+
+  a {
+    color: $white;
+  }
+
+  ul {
+    gap: 40px;
+  }
+
+  li :hover,
+  .active {
+    border-bottom: 2px solid $white;
+  }
+
+}
+
+.section1 {
+  text-align: center;
+  max-width: 800px;
+  margin: 80px auto;
+  font-size: 20px;
+
+  h1 {
+    margin: 30px 0;
+  }
+}
+
+.section2 {
+  .section2:first-child {
+    width: 100%;
+  }
+
+  ul {
+    gap: 40px;
+
+    li {
+      border: 1px solid $green;
+      padding: 10px;
+      width: 100px;
+      text-align: center;
+    }
+
+    li:hover,
+    li.active, {
+      background-color: $green;
+      color: $white;
+    }
+  }
+}
+
+.food-boxs {
+  margin-top: 40px;
+
+  div {
+    width: 20%;
+    height: fit-content;
+    padding: 20px;
+    h1 {
+      margin-bottom: 10px;
+    }
+    .price{
+      color: $green;
+      font-size: 20px;
+
+    }
+  }
+}
+
+.section3{
+  div{
+    padding: 20px;
+    max-width: 600px;
+    p{
+      margin: 20px 0;
+    }
+  }
+}
+
+footer{
+  text-align: center;
+  font-size: 30px;
+  margin: 20px 0;
+}
+
+
+
+.P-home-section{
+  .P-title-information{
+    h3{
+      color: rebeccapurple;
+    }
+  }
+}
