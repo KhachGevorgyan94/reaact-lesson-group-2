@@ -1,123 +1,43 @@
 import React from "react";
-
+import './App.css'
 
 class App extends React.Component {
-
   state = {
-    formData: {
-      firstName: '',
-      lastName: '',
-      email: '',
-      address: '',
-      password: ''
-    },
-    errorData: {
-      firstName: '',
-      lastName: '',
-      email: '',
-      address: '',
-      password: ''
-    }
+    bgColor:'',
+    text:'',
+    fontSizeText:16
   }
 
-  onChangeFirstName = (e) => {
-    //    lav tarberak
-    this.setState({
-      formData: {
-        ...this.state.formData,
-        [e.target.name]: e.target.value
-      }
-    })
-
-    //  vat  tarberak
-    // if(e.target.name==='lastName'){
-    //   this.setState({formData:  {...this.state.formData,lastName:e.target.value}})
-    // }
-    // if(e.target.name==='email'){
-    //   this.setState({formData:{...this.state.formData,email:e.target.value}})
-    // }
-    // if(e.target.name==='address'){
-    //   this.setState({formData:{...this.state.formData,address:e.target.value}})
-    // }
+ handleChangeColor = (e)=>{
+   console.log(e.target.value)
+   this.setState({bgColor:e.target.value})
   }
 
-  handleClick = () => {
-    const {formData, errorData} = this.state
-    const newErrorData = {
-      firstName: '',
-      lastName: '',
-      email: '',
-      address: '',
-      password: ''
-    }
+  handleChangeRange = (e)=>{
+    console.log(e.target.value)
+    this.setState({fontSizeText:e.target.value})
+  }
 
-
-    if (!formData.firstName.trim().length) {
-      newErrorData.firstName = 'Lracreq Anun@'
-    }
-    if (!formData.lastName.trim().length) {
-      newErrorData.lastName = 'Lracreq Azganun@'
-    }
-
-    this.setState({errorData: newErrorData})
-    console.log(formData)
+  handleChangeInput = (e)=>{
+    this.setState({text:e.target.value})
   }
 
   render() {
-    const {formData, errorData} = this.state
-    return <>
-      <div>
-        <div>
-          <label>
-            <input name={'firstName'}
-                   onChange={this.onChangeFirstName}
-                   value={formData.firstName}
-                   placeholder='first name'
-                   className='P-inputs' type="text"/>
+      return <div style={{backgroundColor:this.state.bgColor}}>
+      <label >
+        <input type="color" onChange={this.handleChangeColor}/>
+      </label>
 
-            {errorData.firstName ? <p>{errorData.firstName}</p> : null}
-          </label>
-        </div>
-        <div>
-          <label>
-            <input name={'lastName'}
-                   onChange={this.onChangeFirstName}
-                   value={formData.lastName}
-                   placeholder='last name' className='P-inputs' type="text"/>
-          </label>
-        </div>
-        <div>
-          <label>
-            <input name={'email'}
-                   onChange={this.onChangeFirstName}
-                   value={formData.email}
-                   placeholder='email' className='P-inputs' type="text"/>
-          </label>
-        </div>
-        <div>
-          <label>
-            <input name={'address'}
-                   onChange={this.onChangeFirstName}
-                   value={formData.address}
-                   placeholder='address'
-                   className='P-inputs'
-                   type="text"/>
-          </label>
-        </div>
-        <div>
-          <label>
-            <input name={'password'}
-                   onChange={this.onChangeFirstName}
-                   value={formData.password}
-                   placeholder='password'
-                   className='P-inputs' type="password"/>
-          </label>
-        </div>
-      </div>
-      <button onClick={this.handleClick}>
-        clock me
-      </button>
-    </>
+        <label >
+          <input type="range"value={this.state.fontSizeText} max={40} min={10} onChange={this.handleChangeRange}/>
+        </label>
+
+        <label >
+          <input className='P-input' type="text" value={this.state.text} onChange={this.handleChangeInput}/>
+        </label>
+
+        <p style={{fontSize:this.state.fontSizeText+'px'}}>{this.state.text}</p>
+    </div>
   }
 }
 
