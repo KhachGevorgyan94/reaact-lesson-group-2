@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import './App.css'
 import CardBox from "./components/card-box";
+import TabList from "./components/tab-list";
 
 //  functional component 1
 // const App = ()=>{
@@ -41,9 +42,11 @@ function App() {
     setShowBox(!showBox)
   }
   return <div>
-    {showBox?  <CardBox title={'title 1'} description={'description 1'}/>: null}
+    {/*{showBox?  <CardBox title={'title 1'} description={'description 1'}/>: null}*/}
 
-    <button onClick={handleHideBox}>hide Box</button>
+    <TabList/>
+
+    {/*<button onClick={handleHideBox}>hide Box</button>*/}
 
   </div>
 }
