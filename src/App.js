@@ -7,6 +7,8 @@ import Login from "./pages/login";
 import {useDispatch, useSelector} from "react-redux";
 import {authorizationType} from "./store/redusers/auth/type";
 
+
+
 function App() {
   const token = useSelector(state => state.authReducer.token)
   const [loading, setIsLoading] = useState(true)
@@ -26,14 +28,10 @@ function App() {
 
 
   return <div>
-    {!loading && token ? <Switch>
-        <Route path='/home' component={Home}/>
-        <Redirect to={'/home'}/>
-      </Switch> :
-      <Switch>
-        <Route path='/login' component={Login}/>
-        <Redirect to={'/login'}/>
-      </Switch>}
+    <Switch>
+      <Route path='/home' component={Home}/>
+      <Redirect to={'/home'}/>
+    </Switch>
   </div>
 }
 

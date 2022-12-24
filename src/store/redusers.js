@@ -1,6 +1,7 @@
 import {combineReducers} from 'redux'
 import authReducer from "./redusers/auth/auth";
 import todoListReducer from "./redusers/to-do/todo-list-reducer";
+import TodoSlice from "./redusers/todo-slice";
 
 
 /**
@@ -12,7 +13,8 @@ const rootReducer = combineReducers({
   // auth:authReducer, //{}
   // toDo:todoListReducer //{}
   authReducer,
-  todoListReducer
+  todoListReducer,
+  TodoSlice
 })
 console.log(rootReducer)
 // authReducer = authReducer

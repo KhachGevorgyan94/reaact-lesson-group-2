@@ -15,9 +15,12 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
  * vornel hasaneli e darcnum ambox  producti  makardakov  bolor  componentnerum
  * vor@ nuynpes handisanum e karevor bajinneric mek@
  * **/
+
+//  npm install @reduxjs/toolkit react-redux
+
 root.render(
   <React.StrictMode>
-    <Provider store={store}>
+    <Provider  store={store}>
       <BrowserRouter>
         <App/>
       </BrowserRouter>

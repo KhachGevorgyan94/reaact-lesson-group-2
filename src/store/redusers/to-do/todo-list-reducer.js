@@ -59,13 +59,12 @@ const initialState = {
  * **/
 const TodoListReducer = (state = initialState, action) => {
   console.log(action)
-
+  //
   switch (action.type) {
     case toDoActions.CREATE_TO_DO: {
-
       return {...state, toDoList: [...state.toDoList, action.payload]}
     }
-    case toDoActions.REMOVE_LIST: {
+    case 'REMOVE_LIST': {
       console.log(action, 'action')
       return {...state, toDoList: state.toDoList.filter((item, i) => i !== action.payload)}
     }
@@ -83,9 +82,8 @@ const TodoListReducer = (state = initialState, action) => {
     default: {
       return {...state}
     }
-
   }
-
+  //
 
 }
 

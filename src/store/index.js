@@ -1,9 +1,14 @@
 import {createStore} from 'redux'
 import rootReducer from "./redusers";
 import TodoListReducer from "./redusers/to-do/todo-list-reducer";
+import todoListReducer from "./redusers/to-do/todo-list-reducer";
 
 
 // const store = createStore(TodoListReducer)
+
+//  redux toolkit integration
+
+import { configureStore } from '@reduxjs/toolkit'
 /**
  * @createStore()  reduxi  funkcianeric e  vori mijocov  stexcvac  redusernern
  * aysinqn  ayn funkcianern voroqn irancic nerkayacnum en redaxi hamar naxatesavc
@@ -15,10 +20,17 @@ import TodoListReducer from "./redusers/to-do/todo-list-reducer";
  * mi qani reduserner  integrelu hamar  redux@  mez talis e mek ayl method  vori mijocov nax bolor nedusernenr miavorum
  * eqn irar  sarqelov mek amboxjakan, aynohetev  ayn  poxancum enq  ays  funkcain
  * **/
+// rootReducer
+
+// const store = createStore(rootReducer)
 
 
-const store = createStore(rootReducer)
+// redux toolkit integration
 
+const store = configureStore({
+  reducer:rootReducer,
+
+})
 /**
  * // patkeracnum eqn  vor takic motavor ayspes e ashxatum ev  mer redusernerum
  * // stexcvac initialStatnern miavorvelov irar veragrvum en {state} in
